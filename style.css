@@ -1,0 +1,137 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* هاي حتى ما ناخذ المارجن والبادنغ بالقياسات مو؟ */
+    
+
+
+}
+*::selection{
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    background-color: rgb(17, 228, 217);
+
+}
+
+
+.search i{
+    color: white;
+}
+.logo img{
+    display: block;
+    width: 3em;
+    height: auto;
+    padding: 0px auto;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 10px 50px;
+}
+
+
+.navigation{
+    display: flex;
+}
+
+.navigation a {
+    font-family: "Fjalla One";
+    font-size: 1.5em;
+    height: 3rem;
+    width: fit-content; 
+    padding: 3px;
+    color: hsla(0, 0%, 100%, 0.836);
+    text-decoration: none;
+    margin: 0px 25px;
+} 
+.navigation a:hover {
+    height: fit-content;
+    color: coral; 
+    background-color: #ccc;
+    border-radius: 5px;
+} 
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url(wp5276663-one-piece-pc-wallpapers.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* backdrop-filter: blur(5px); */
+    /* filter: blur(2px) */
+    /* عوفها لازم نسوي دف للباغراوند */
+    
+/* نجب نجب فهمت   */
+}
+
+main{
+
+    background-color: #ffffff63;
+    width: 60rem;
+    height: 35rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
+
+
+    display: flex;
+    justify-content: center; 
+    align-items:end;
+}
+
+
+
+main .navigation-buttons{
+    display: flex;
+    justify-content: row;
+    margin-bottom: 10px;
+    /* background-color: #ffffff63;
+    border-radius: 15px; */
+}
+
+
+main .navigation-buttons button{
+
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius:50% ;
+}
+
+
+
+main .navigation-buttons .images{
+       /* transition: opacity 0.5s ease-in-out; 
+    opacity: 0;  */
+    margin: 5px;
+    background-color: tomato;
+    width: 40px;
+    height: 40px;
+    border-radius:50% ;
+    background-size :cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+main{
+    /* transition: opacity 0.5s ease-in-out; 
+    opacity: 0;  */
+
+    /* transition: background-image 0.5s ease-in-out; */
+    background-position: center;
+    background-size :cover;
+    background-repeat: no-repeat;
+}

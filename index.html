@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <title>Lnding page</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo"><img src="./zoro/pngegg(6).png" alt="logo"></div>
+        
+            <div class="navigation">
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">Anime</a>
+                <a href="#">contact us</a>
+            </div>
+
+            <div class="search">
+                <i class="material-symbols-outlined">search</i>
+            </div>
+        </nav>
+
+
+        <main style="background-image: url(./zoro/zoro.png);" id="main">
+            <div class="navigation-buttons">
+
+                <button onclick="nextImage()" ><span class="material-symbols-outlined">
+                    arrow_back_ios
+                    </span></button>
+
+                    <span style="background-image: url(./zoro/zoro2.jpg);" class="images" id="next"></span>
+                    <span style="background-image: url(./zoro/zoro.png);" class="images" id="current"></span>
+                    <span style="background-image: url(./zoro/zoro7.png);" class="images" id="previous"></span>
+    
+    
+                    <button  onclick="previousImage()"><span class="material-symbols-outlined">
+                        arrow_forward_ios
+                        </span></button>
+
+
+
+            </div>
+
+           
+        </main>
+    </div>
+
+
+
+    <script>
+        var images = ["./zoro/zoro.png",  "./zoro/zoro2.jpg", "./zoro/zoro3.jpg", "./zoro/zoro4.png", "./zoro/zoro5.jpg", "./zoro/zoro6.jpg","./zoro/zoro7.png"];
+        var currentIndex = 0;
+        var imageContainer = document.getElementById('main');
+        var current = document.getElementById('current');
+        var next = document.getElementById('next');
+        var previous = document.getElementById('previous');
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            setImage();
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            setImage();
+        }
+
+        function setImage() {
+            imageContainer.style.backgroundImage = "url('" + images[currentIndex] + "')";
+            current.style.backgroundImage = "url('" + images[currentIndex] + "')";
+            next.style.backgroundImage = "url('" + images[(currentIndex + 1) % images.length] + "')";
+            previous.style.backgroundImage = "url('" + images[(currentIndex - 1 + images.length) % images.length] + "')";
+        }
+ 
+
+    </script>
+</body>
+</html>
